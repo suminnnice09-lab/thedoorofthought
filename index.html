@@ -24,15 +24,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
 import { getFirestore, collection, doc, getDoc, addDoc, writeBatch, updateDoc, onSnapshot, query, where, serverTimestamp, orderBy } from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
-const firebaseConfig = {
-  apiKey: "AIzaSyCnwp70D8TSuogvuyu1kkI1ykj9iu30huc",
-  authDomain: "thedoorofthought-faad5.firebaseapp.com",
-  projectId: "thedoorofthought-faad5",
-  storageBucket: "thedoorofthought-faad5.firebasestorage.app",
-  messagingSenderId: "649396009590",
-  appId: "1:649396009590:web:44b9c4d5816be9a02dfd57",
-  measurementId: "G-B0J6QSLLX0"
-};
+const firebaseConfig={apiKey:'AIzaSyCYTsteVSRD5uOyISQ9uM70fORVybAp4nM',authDomain:'thedoorofthought.firebaseapp.com',projectId:'thedoorofthought',storageBucket:'thedoorofthought.firebasestorage.app',messagingSenderId:'647505176003',appId:'1:647505176003:web:a0d80a59f2250ec521c976',measurementId:'G-2MEVZ6RG4B'};
 const app=initializeApp(firebaseConfig), auth=getAuth(app), db=getFirestore(app), provider=new GoogleAuthProvider();
 const $=id=>document.getElementById(id);
 const safely=(s)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
